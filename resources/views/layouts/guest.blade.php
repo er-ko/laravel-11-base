@@ -11,6 +11,9 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <!-- Styles -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -25,6 +28,19 @@
             <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
                 {{ $slot }}
             </div>
+            @if (Route::has('login'))
+                @if (Route::has('register'))
+                    @if (request()->routeIs('login'))
+                        <div class="w-full sm:max-w-md mt-2 px-6 py-4 flex justify-end">
+                            <span class="mr-2 text-sm text-gray-500 dark:text-gray-500">don't have an account?</span>
+                            <a
+                                class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+                                href="{{ route('register') }}">
+                                Register now!
+                            </a>
+                    @endif
+                @endif
+            @endif
         </div>
     </body>
 </html>
