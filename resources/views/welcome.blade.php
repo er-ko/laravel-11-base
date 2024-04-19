@@ -156,19 +156,19 @@
                     <footer class="py-16 flex items-center justify-between text-sm text-black dark:text-white/70">
                         <nav class="-mx-2">
                             <a
-                                href="{{ route('login') }}"
+                                href="{{ url('locale/en') }}"
                                 class="rounded-md p-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                             >
                                 en
                             </a>
                             <a
-                                href="{{ route('login') }}"
+                                href="{{ url('locale/cs') }}"
                                 class="rounded-md p-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                             >
                                 cs
                             </a>
                         </nav>
-                        <div>Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }}) | &copy;{{ date('Y') }}</div>
+                        <div>&copy;{{ date('Y') }} | Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</div>
                     </footer>
                 </div>
             </div>
