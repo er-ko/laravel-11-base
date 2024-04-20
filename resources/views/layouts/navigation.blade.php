@@ -48,11 +48,11 @@
                                 {{ __('messages.log_out') }}
                             </x-dropdown-link>
                         </form>
-                        <div class="grid gap-2 grid-cols-2 px-2">
-                            <x-dropdown-link :href="url('locale/en')" class="flex items-center justify-center rounded-lg bg-gray-50">
+                        <div class="grid gap-1 grid-cols-2 mt-1">
+                            <x-dropdown-link :href="url('locale/en')" class="flex items-center justify-center rounded-lg bg-gray-50 dark:bg-gray-600">
                                 en
                             </x-dropdown-link>
-                            <x-dropdown-link :href="url('locale/cs')" class="flex items-center justify-center rounded-lg bg-gray-50">
+                            <x-dropdown-link :href="url('locale/cs')" class="flex items-center justify-center rounded-lg bg-gray-50 dark:bg-gray-600">
                                 cs
                             </x-dropdown-link>
                         </div>  
